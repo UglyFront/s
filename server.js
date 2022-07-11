@@ -88,6 +88,7 @@ app.get("/posts", async(req, res) => {
             }
             catch(e) {
                 console.log(e)
+                 res.status(400).json();
             }
     })
     }
@@ -103,7 +104,7 @@ app.get("/posts", async(req, res) => {
             }
             catch(e) {
                 console.log(e)
-         
+          res.status(400).json();
     }})
 
 }})// ПОЛУЧИТЬ ВСЕ ПОСТЫ
@@ -115,6 +116,7 @@ app.get("/posts_two", async(req, res) => {
         }
         catch(e) {
             console.log(e)
+             res.status(400).json();
         }
 })}) // 2 ПОСТА
 
@@ -126,6 +128,7 @@ app.put("/posts_userid", async(req, res) => {
         }
         catch(e) {
             console.log(e)
+             res.status(400).json();
         }
     })})// ПОЛУЧИТЬ ВСЕ ПОСТЫ ЮЗЕРА
 
@@ -144,6 +147,7 @@ app.post("/posts", async(req, res) => {
         }
         catch(e) {
             console.log(e)
+             res.status(400).json();
         } 
     })
 })// ДОБАВИТЬ ПОСТ 
@@ -159,6 +163,7 @@ app.post("/posts_like", async(req, res) => {
         }
         catch(e) {
             console.log(e)
+             res.status(400).json();
         }
     })
 })
@@ -174,6 +179,7 @@ app.delete("/posts_like", async(req, res) => {
         }
         catch(e) {
             console.log(e)
+             res.status(400).json();
         }
     })
 })
@@ -188,6 +194,7 @@ app.put("/posts_like_user", async(req, res) => {
         }
         catch(e) {
             console.log(e)
+             res.status(400).json();
         }
     })
 })
@@ -201,6 +208,7 @@ app.put("/count_likes_post", async(req, res) => {
         }
         catch(e) {
             console.log(e)
+             res.status(400).json();
         }
     })
 })
@@ -216,6 +224,7 @@ app.delete("/posts", async(req, res) => {
         }
         catch(e) {
             console.log(e)
+             res.status(400).json();
         }
     })
 }) // УДАЛИТЬ ПОСТ
@@ -228,6 +237,7 @@ app.delete("/posts_all", async(req, res) => {
         }
         catch(e) {
             console.log(e)
+             res.status(400).json();
         }
 })})
 
@@ -244,6 +254,7 @@ app.post("/comment", async(req, res) => {
         }
         catch(e) {
             console.log(e)
+             res.status(400).json();
         }
     })
 }) // ДОБАВИТЬ КОММЕНТ
@@ -256,6 +267,7 @@ app.get("/сomment", async(req, res) => {
             res.status(200).json(r.rows)
         } catch(e) {
             console.log(e)
+             res.status(400).json();
         }
     })
 }) // ПОЛУЧИТЬ ВСЕ КОММЕНТЫ
@@ -270,6 +282,7 @@ app.delete("/comment", async(req, res) => {
             res.status(200).json("удалил")
         } catch(e) {
             console.log(e)
+             res.status(400).json();
         }
     })
 }) // УДАЛИТЬ КОММЕНТ
@@ -284,6 +297,7 @@ app.put("/comment_post", async(req, res) => {
             res.status(200).json(r.rows)
         } catch(e) {
             console.log(e)
+             res.status(400).json();
         }
     })
 }) // ПОЛУЧИТЬ ВСЕ КОММЕНТЫ К ПОСТУ ПО ИД
@@ -331,6 +345,7 @@ app.post("/registr", async (req, res) => {
         }
         catch(err) {
             console.log(err)
+             res.status(400).json();
         }
     })
 
@@ -351,6 +366,7 @@ app.put("/addcoin", async (req, res) => {
         }
         catch(e) {
             console.log(e)
+             res.status(400).json();
         } 
     })
     
@@ -376,6 +392,7 @@ app.post("/login", async(req, res) => {
         catch(e) {
             console.log(323232)
             console.log(e)
+             res.status(400).json();
         }
     })
     
@@ -394,6 +411,7 @@ app.get("/gettingusers", async (req, res) => {
         }
         catch(e) {
             console.log(e)
+             res.status(400).json();
         }
     })
 })// ПОЛУЧИТЬ ВСЕХ ПОЛЬЗОВАТЕЛЕЙ
@@ -408,6 +426,7 @@ app.put("/getuser", async (req, res) => {
         }
         catch(e) {
             console.log(e)
+             res.status(400).json();
         }
     })
 })// ПОЛУЧИТЬ 1 ПОЛЬЗОВАТЕЛЯ
@@ -423,6 +442,7 @@ app.delete("/user", async (req, res) => {
         }
         catch(e) {
             console.log(e)
+             res.status(400).json();
         }
     })
 })
@@ -454,6 +474,7 @@ app.post("/categories", async (req, res) => {
         }
         catch(e) {
             console.log(e)
+             res.status(400).json();
         }
     })
 }) // СОЗДАТЬ КАТЕГОРИЮ
@@ -470,6 +491,7 @@ app.delete("/delcat", async (req, res) => {
         }
         catch(e) {
             console.log(e)
+             res.status(400).json();
         }
     })
     
@@ -486,6 +508,7 @@ app.get("/categories", async (req, res) => {
         }
         catch (e) {
             console.log(e)
+             res.status(400).json();
         }
     })
 }) // ПОЛУЧИТЬ ВСЕ КАТЕГОРИИ
@@ -527,6 +550,7 @@ app.post("/newelement", async (req, res) => {
         }
         catch (e) {
             console.log(e)
+             res.status(400).json();
         }
     })
 }) // СОЗДАТЬ НОВЫЙ ТОВАР
@@ -540,6 +564,7 @@ app.get("/all", async(req, res) => {
         }   
         catch(e) {
             console.log(e)
+             res.status(400).json();
         }
     })
 })// ПОЛУЧИТЬ ВСЕ ТОВАРЫ
@@ -561,11 +586,13 @@ app.put("/updatecoin", async(req, res) => {
                 }
                 catch(e) {
                     console.log(e)
+                     res.status(400).json();
                 }
             })
         }
         catch(e) {
             console.log(e)
+             res.status(400).json();
         }
     })
     
@@ -590,6 +617,7 @@ app.delete("/delel", async (req, res) => {
         }
         catch(e) {
             console.log(e)
+             res.status(400).json();
         } 
     })
 }) // УДАЛИТЬ ТОВАР
@@ -623,6 +651,7 @@ app.put("/delOrder", async(req, res) => {
         }
         catch(e) {
             console.log(e)
+             res.status(400).json();
         }
     })
 }) // УДАЛИТЬ 1 ЗАКАЗ
@@ -641,6 +670,7 @@ app.post("/order", async(req, res) => {
        }
        catch(e) {
             console.log(e)
+            res.status(400).json();
        }
    })
 }) // ОТПРАВИТЬ ЗАКАЗ ИЗ МОДАЛКИ
@@ -654,6 +684,7 @@ app.get("/order", async(req, res) => {
         }
         catch(e) {
             console.log(e)
+             res.status(400).json();
         }
     })
 }) // ПОЛУЧИТЬ ВСЕ ЗАКАЗЫ
@@ -668,6 +699,7 @@ app.put("/clear", async(req, res) => {
         }
         catch(e) {
             console.log(e)
+             res.status(400).json();
         }
     })
 }) // ОЧИСТИТЬ ВСЕ ЗАКАЗЫ
@@ -684,6 +716,7 @@ app.get("/courses", async(req, res) => {
         }
         catch(e) {
             console.log(e)
+             res.status(400).json();
         } 
     })
 })
@@ -700,6 +733,7 @@ app.post("/courses", async(req, res) => {
         }
         catch(e) {
             console.log(e)
+             res.status(400).json();
         }
     })
 })
@@ -714,6 +748,7 @@ app.delete("/courses", async(req, res) => {
         }
         catch(e) {
             console.log(e)
+             res.status(400).json();
         }
     })
 })
@@ -742,6 +777,7 @@ app.delete("/courses", async(req, res) => {
             }
             catch(e) {
                 console.log(e)
+                 res.status(400).json();
             }
         })
     })
@@ -755,6 +791,7 @@ app.delete("/courses", async(req, res) => {
             }
             catch(e) {
                 console.log(e)
+                 res.status(400).json();
             }
         })
     })
@@ -769,6 +806,7 @@ app.delete("/courses", async(req, res) => {
             }
             catch(e) {
                 console.log(e)
+                 res.status(400).json();
             }
         })
     })
@@ -797,6 +835,7 @@ app.post("/day", async (req, res) => {
         }
         catch(e) {
             console.log(e)
+             res.status(400).json();
         }
     })
 })
@@ -814,6 +853,7 @@ app.post("/lessons", async (req, res) => {
         }
         catch(e) {
             console.log(e)
+             res.status(400).json();
         }
     })
 })
@@ -857,6 +897,7 @@ app.delete("/day", async(req, res) => {
         }
         catch(e) {
             console.log(e)
+             res.status(400).json();
         }
     })
 })
@@ -882,7 +923,7 @@ app.post("/trade", async(req, res) => {
             }
         }
         catch(e) {
-
+            res.status(400).json();
         }
     })
 })
