@@ -21,7 +21,7 @@ db.connect()
 
 const app = express()
 
-const PORT = 100
+const PORT = 80
 
 
 
